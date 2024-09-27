@@ -43,15 +43,16 @@ type student struct {
 	grade             Grade
 }
 
-func (p person) isAdult() bool { //a method that takes a person and returns a boolean
+// Method to struct, funct (receiver) name (parameters) return type
+func (p *person) isAdult() bool { //a method that takes a person and returns a boolean
 	return p.age >= 18
 }
 
-func (p person) greet() {
+func (p *person) greet() {
 	fmt.Println("Hello, my name is", p.name)
 }
 
-func (s student) greet() {
+func (s *student) greet() {
 	if s.enrolledInCollege {
 		fmt.Println("Hello, my name is", s.name, "and I am a student", "majoring in", *s.major, "with a grade of", s.grade)
 	} else {
