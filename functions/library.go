@@ -4,6 +4,9 @@ import (
 	"fmt"
 )
 
+//Use value receivers when you want to work with a copy and ensure that the original data remains unchanged.
+//Use pointer receivers when you need to modify the original struct or when working with large structs to avoid unnecessary copying.
+
 // Book struct definition
 type Book struct {
 	Title  string
